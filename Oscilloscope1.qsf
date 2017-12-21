@@ -1,0 +1,148 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# Date created = 17:24:37  March 28, 2017
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Oscilloscope1_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY main
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:24:37  MARCH 28, 2017"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE adc_clock.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_AF14 -to clkin
+set_global_assignment -name VERILOG_FILE main.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AA18 -to clkout_a
+set_location_assignment PIN_AE17 -to clkout_b
+set_location_assignment PIN_AG20 -to adcoen_a
+set_location_assignment PIN_AJ21 -to adcoen_b
+set_global_assignment -name VERILOG_FILE adc_control.v
+set_global_assignment -name VERILOG_FILE trigger.v
+set_global_assignment -name VERILOG_FILE comparator.v
+set_location_assignment PIN_AA19 -to adc_data_a[0]
+set_location_assignment PIN_AG21 -to adc_data_a[13]
+set_location_assignment PIN_AF21 -to adc_data_a[12]
+set_location_assignment PIN_AF19 -to adc_data_a[11]
+set_location_assignment PIN_AF20 -to adc_data_a[10]
+set_location_assignment PIN_AE19 -to adc_data_a[9]
+set_location_assignment PIN_AD20 -to adc_data_a[8]
+set_location_assignment PIN_AE18 -to adc_data_a[7]
+set_location_assignment PIN_AD19 -to adc_data_a[6]
+set_location_assignment PIN_AK21 -to adc_data_a[5]
+set_location_assignment PIN_AJ20 -to adc_data_a[4]
+set_location_assignment PIN_AH20 -to adc_data_a[3]
+set_location_assignment PIN_AH19 -to adc_data_a[2]
+set_location_assignment PIN_AC20 -to adc_data_a[1]
+set_location_assignment PIN_V16 -to led_comp_test
+set_global_assignment -name VERILOG_FILE vga.v
+set_location_assignment PIN_B11 -to vga_h_sync
+set_location_assignment PIN_D11 -to vga_v_sync
+set_location_assignment PIN_A11 -to vga_dacclk
+set_location_assignment PIN_F10 -to vga_blankn
+set_location_assignment PIN_C10 -to vga_syncn
+set_location_assignment PIN_J14 -to vga_bout[7]
+set_location_assignment PIN_G15 -to vga_bout[6]
+set_location_assignment PIN_F15 -to vga_bout[5]
+set_location_assignment PIN_H14 -to vga_bout[4]
+set_location_assignment PIN_F14 -to vga_bout[3]
+set_location_assignment PIN_H13 -to vga_bout[2]
+set_location_assignment PIN_G13 -to vga_bout[1]
+set_location_assignment PIN_B13 -to vga_bout[0]
+set_location_assignment PIN_E11 -to vga_gout[7]
+set_location_assignment PIN_F11 -to vga_gout[6]
+set_location_assignment PIN_G12 -to vga_gout[5]
+set_location_assignment PIN_G11 -to vga_gout[4]
+set_location_assignment PIN_G10 -to vga_gout[3]
+set_location_assignment PIN_H12 -to vga_gout[2]
+set_location_assignment PIN_J10 -to vga_gout[1]
+set_location_assignment PIN_J9 -to vga_gout[0]
+set_location_assignment PIN_F13 -to vga_rout[7]
+set_location_assignment PIN_E12 -to vga_rout[6]
+set_location_assignment PIN_D12 -to vga_rout[5]
+set_location_assignment PIN_C12 -to vga_rout[4]
+set_location_assignment PIN_B12 -to vga_rout[3]
+set_location_assignment PIN_E13 -to vga_rout[2]
+set_location_assignment PIN_C13 -to vga_rout[1]
+set_location_assignment PIN_A13 -to vga_rout[0]
+set_global_assignment -name VERILOG_FILE vga_colour.v
+set_global_assignment -name VERILOG_FILE vga_fillarea.v
+set_global_assignment -name VERILOG_FILE vga_hline.v
+set_global_assignment -name VERILOG_FILE vga_vline.v
+set_global_assignment -name VERILOG_FILE vga_rectangle.v
+set_global_assignment -name VERILOG_FILE display_ctrl.v
+set_global_assignment -name VERILOG_FILE display_waveram.v
+set_location_assignment PIN_V17 -to debug_led_out[7]
+set_location_assignment PIN_Y21 -to debug_led_out[0]
+set_location_assignment PIN_W21 -to debug_led_out[1]
+set_location_assignment PIN_W20 -to debug_led_out[2]
+set_location_assignment PIN_Y19 -to debug_led_out[3]
+set_location_assignment PIN_W19 -to debug_led_out[4]
+set_location_assignment PIN_W17 -to debug_led_out[5]
+set_location_assignment PIN_V18 -to debug_led_out[6]
+set_global_assignment -name VERILOG_FILE vga_chargen.v
+set_global_assignment -name VERILOG_FILE vga_charrom.v
+set_global_assignment -name VERILOG_FILE vga_charram.v
+set_global_assignment -name VERILOG_FILE vga_attrram.v
+set_global_assignment -name VERILOG_FILE ps2.v
+set_location_assignment PIN_AE7 -to ps2_dat_in
+set_location_assignment PIN_AD7 -to ps2_clk_in
+set_location_assignment PIN_Y17 -to adc_data_b[0]
+set_location_assignment PIN_AG17 -to adc_data_b[13]
+set_location_assignment PIN_AE16 -to adc_data_b[12]
+set_location_assignment PIN_AF16 -to adc_data_b[11]
+set_location_assignment PIN_AG16 -to adc_data_b[10]
+set_location_assignment PIN_AH17 -to adc_data_b[9]
+set_location_assignment PIN_AJ16 -to adc_data_b[8]
+set_location_assignment PIN_AH18 -to adc_data_b[7]
+set_location_assignment PIN_AJ17 -to adc_data_b[6]
+set_location_assignment PIN_AJ19 -to adc_data_b[5]
+set_location_assignment PIN_AK18 -to adc_data_b[4]
+set_location_assignment PIN_AK19 -to adc_data_b[3]
+set_location_assignment PIN_AK16 -to adc_data_b[2]
+set_location_assignment PIN_Y18 -to adc_data_b[1]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

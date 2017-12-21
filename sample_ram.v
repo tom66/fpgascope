@@ -1,0 +1,40 @@
+// Sample memory: 1024 sample memory with INPORT and OUTPORT 
+//
+// (C) Thomas Oldbury 2017
+
+module sample_ram(
+	clk, 			// clock, negedge triggered
+	addr,	 		// address
+	wr_en, 		// write enable
+	rd_en, 		// read enable
+	data_rd,		// data read out
+	data_wr		// data write in
+);
+
+parameter n_entries = 1024;
+parameter bit_width = 14;
+
+output reg [bit_width - 1:0] data_rd;
+input [bit_width - 1:0] data_wr;
+input clk, addr, wr_en, rd_en;
+
+// memory block - should be inferred by FPGA compiler as blockram
+reg [bit_width-1:0] sample_blockram[n_entries - 1:0];
+
+// on clock negative edge for CLK read or write data
+always @(negedge clk) begin
+
+	if ((wr_en == 1 && rd_en == 1) || (wr_en == 0 && rd_en == 0)) begin
+		data_rd = 0;
+	end else if (wr_en == 1) begin
+		// write data to blockram
+		sample_blockram[addr] <= data_wr;
+		data_rd = 0;
+	end else begin
+		// read data from blockram
+		data_rd = sample_blockram[addr];
+	end;
+
+end
+
+endmodule
